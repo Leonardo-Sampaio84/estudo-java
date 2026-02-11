@@ -58,10 +58,11 @@ public class Exercicio_08 {
                         scanner.next(); // limpa entrada inválida
                     } else {
                         double Sacar = scanner.nextDouble();
-
                         if (Sacar <= 0) {
                             System.out.println("Valor inválido! O valor deve ser positivo.");
-                        } else {
+                        } else if (Sacar >= saldoInicial) {
+                            System.out.println("Saldo insuficiente");
+                        }else {
                             saldoInicial -= Sacar;
                             System.out.println("Saque realizado. Saldo atual: " + saldoInicial);
                         }
